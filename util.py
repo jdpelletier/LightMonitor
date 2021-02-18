@@ -29,20 +29,8 @@ def FolderCreate(today):
         print ("Successfully created the directory %s " % path)
     return path
 
-def handle_client():
-    l = []
-    for i in range(10):
-        conn, addr = server.accept()
-        msg = conn.recv(1024).decode()
-        print(f"{msg}")
-        l.append(float(msg))
-        conn.close()
-        time.sleep(1)
-        i += 1
-    l_av = statistics.mean(l)
-    print(f"{l_av}")
 
-def servRead():
+def servRead(server):
         l = []
         for i in range(10):
             conn, addr = server.accept()
