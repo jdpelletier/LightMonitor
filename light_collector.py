@@ -4,7 +4,7 @@ import datetime
 
 import util
 
-PORT = 5055
+PORT = 5065
 SERVER = socket.gethostbyname(socket.gethostname())
 ADDR = (SERVER, PORT)
 
