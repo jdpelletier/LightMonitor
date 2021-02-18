@@ -21,7 +21,7 @@ def light_collector():
     l = util.servRead(server)
     string = f"{l}"
     Util.FileWrite(path, string)
-    time.sleep(288)            # wait 5 minutes
+    # time.sleep(288)            # wait 5 minutes
     return
 
 def start():
