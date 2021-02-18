@@ -1,7 +1,15 @@
+import socket
 import time
 import datetime
 
 import util
+
+PORT = 5055
+SERVER = socket.gethostbyname(socket.gethostname())
+ADDR = (SERVER, PORT)
+
+server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+server.bind(ADDR)
 
 def light_collector():
     # Read and record the data
