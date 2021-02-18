@@ -19,7 +19,7 @@ def FileWrite(filepath, data):
 def FolderCreate(today):
     todaystr = today.isoformat()
 
-    parent_directory = "/home/pi/Desktop/Hatchery/TestData"
+    parent_directory = "/home/pi/Desktop/Apps/FireBeetleTesting/LightMonitor/TestData"
     path = os.path.join(parent_directory, todaystr)
     try:
         os.mkdir(path)

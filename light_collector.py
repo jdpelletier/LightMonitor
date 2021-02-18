@@ -17,7 +17,7 @@ def light_collector():
     path = util.FolderCreate(currentDay)
     if currentDay != datetime.date.today():
         currentDay = datetime.date.today()
-        path = Util.FolderCreate(currentDay)
+        path = util.FolderCreate(currentDay)
     l = util.servRead(server)
     string = f"{l}"
     Util.FileWrite(path, string)
