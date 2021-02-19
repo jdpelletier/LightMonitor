@@ -4,8 +4,8 @@ import datetime
 
 import util
 
-PORT = 5065
-SERVER = socket.gethostbyname(socket.gethostname())
+PORT = 6000
+SERVER = "192.168.0.22"
 ADDR = (SERVER, PORT)
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
