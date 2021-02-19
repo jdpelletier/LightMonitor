@@ -18,6 +18,7 @@ def history(path, daystring, submit):
                 time = data[0].strip().strip('*\x00')
                 time = datetime.strptime(time, '%H:%M:%S')
                 today = date.today()
+                data_date = datetime.strptime(daystring, '%Y-%m-%d')
                 time = time.replace(year=today.year, month=today.month, day=today.day)
                 time_arr.append(time)
                 lux.append(float(data[1]))
