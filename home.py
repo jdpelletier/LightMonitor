@@ -26,7 +26,7 @@ def home(path):
     datadic = {
         "day" : today,
         "time" : time.strftime("%H:%M:%S"),
-        "lux" : lux,
+        "lux" : float(data[1]),
         "maxlux" : lux_max,
         "minlux" : lux_min,
         "avlux" : lux_av
