@@ -3,9 +3,6 @@ import datetime
 
 from werkzeug.urls import url_parse
 from flask import Flask, request, render_template, flash, redirect, url_for
-from flask_sqlalchemy import SQLAlchemy
-from flask_login import LoginManager, current_user, login_user, logout_user, login_required, UserMixin
-from flask_migrate import Migrate
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_bootstrap import Bootstrap
 
