@@ -24,7 +24,7 @@ def FolderCreate(today):
     try:
         os.mkdir(path)
     except OSError:
-        print ("The folder %s is already created" % path)
+        pass
     else:
         print ("Successfully created the directory %s " % path)
     return path

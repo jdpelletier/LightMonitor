@@ -15,9 +15,6 @@ def light_collector():
     # Read and record the data
     currentDay = datetime.date.today()
     path = util.FolderCreate(currentDay)
-    if currentDay != datetime.date.today():
-        currentDay = datetime.date.today()
-        path = util.FolderCreate(currentDay)
     l = util.servRead(server)
     string = f"{l}"
     util.FileWrite(path, string)
