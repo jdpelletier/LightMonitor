@@ -6,8 +6,6 @@ from flask import Flask, request, render_template, flash, redirect, url_for
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_bootstrap import Bootstrap
 
-from config import Config
-
 app = Flask(__name__)
 bootstrap = Bootstrap(app)
 
