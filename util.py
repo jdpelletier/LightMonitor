@@ -35,7 +35,6 @@ def servRead(server):
         for i in range(10):
             conn, addr = server.accept()
             msg = conn.recv(1024).decode()
-            print(f"{msg}")
             l.append(float(msg))
             conn.close()
             time.sleep(1)

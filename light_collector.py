@@ -20,7 +20,7 @@ def light_collector():
         path = util.FolderCreate(currentDay)
     l = util.servRead(server)
     string = f"{l}"
-    Util.FileWrite(path, string)
+    util.FileWrite(path, string)
     time.sleep(288)            # wait 5 minutes
     return
 
