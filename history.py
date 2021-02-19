@@ -9,8 +9,9 @@ from bokeh.embed import components
 
 
 def history(path, daystring, submit):
-        time_arr = []
-        lux = []
+    time_arr = []
+    lux = []
+    try:
         with open(path, 'r') as f:
             for line in f:
                 data = line.split()
