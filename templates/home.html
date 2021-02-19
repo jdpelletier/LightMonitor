@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block page_content %}
+<style>
+ table td {
+   font-size: 35px;
+ }
+</style>
+		<form action="." method="post">
+		<h1>Lux Measurements</h1>
+                <h2>{{ datadic.day }}</h2>
+                <h3>Measurements at {{ datadic.time }}</h3>
+								<div class="row">
+								<div class="col-md-6">
+					          <table class="table table-bordered">
+					            <thead>
+					              <tr>
+					                <th>Current</th>
+					                <th>Max</th>
+					                <th>Average</th>
+                          <th>Min</th>
+					              </tr>
+					            </thead>
+					            <tbody>
+					              <tr>
+					                <td>{{ datadic.lux}}</td>
+					                <td>{{ datadic.maxlux }}</td>
+					                <td>{{ datadic.avlux }}</td>
+                          <td>{{ datadic.minlux }}</td>
+					              </tr>
+					            </tbody>
+					          </table>
+					        </div>
+								</div>
+
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="card text-center">
+                      <div class="card-header">
+                      </div>
+                      <div class="card-body">
+                        {{luxplot[1]['plot']|safe}}
+                          {{t1plot[0]|safe}}
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+{% endblock %}

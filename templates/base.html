@@ -1,0 +1,45 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+      {{ super() }}
+      <link
+          href="http://cdn.pydata.org/bokeh/release/bokeh-2.1.0.min.css"
+          rel="stylesheet" type="text/css">
+      <link
+          href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.1.0.min.css"
+          rel="stylesheet" type="text/css">
+
+      <script src="http://cdn.pydata.org/bokeh/release/bokeh-2.1.0.min.js"></script>
+      <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-2.1.0.min.js"></script>
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <title>{% block title %}{% endblock %} - Light Monitor</title>
+{% endblock %}
+
+{% block navbar %}
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Navbar</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Hatchery</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('home_') }}">Home</a></li>
+                    <li><a href="{{ url_for('history_') }}">Historical Plots</a></li>
+                    <li><a href="/bootstrap"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        {% block page_content %}{% endblock %}
+    </div>
+{% endblock %}
